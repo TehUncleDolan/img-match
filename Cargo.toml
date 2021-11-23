@@ -1,0 +1,21 @@
+[package]
+name = "img-match"
+version = "0.1.0-alpha.0"
+description = "CLI tool to compare and match two sets of images"
+authors = ["Teh Uncle Dolan"]
+license = "BSD-3-Clause"
+edition = "2018"
+readme = "README.md"
+publish = false
+
+[[bin]]
+name = "img-cmp"
+path = "src/bin/cmp.rs"
+
+[dependencies]
+bktree = "1.0"
+eyre = "0.6"
+image = { version = "0.23", default-features = false, features = ["gif", "jpeg", "ico", "png", "webp", "bmp"] }
+img_hash = "3.2"
+rayon = "1.5"
+structopt = "0.3"
