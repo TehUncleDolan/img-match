@@ -1,6 +1,6 @@
 [package]
 name = "img-match"
-version = "0.1.0"
+version = "0.1.1-alpha.0"
 description = "CLI tool to compare and match two sets of images"
 authors = ["Teh Uncle Dolan"]
 license = "BSD-3-Clause"
