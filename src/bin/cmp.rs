@@ -1,21 +1,17 @@
-use eyre::{
-    Context,
-    Result,
-};
-use image::{
-    io::Reader as ImageReader,
-    DynamicImage,
-};
-use img_hash::{
-    HashAlg,
-    HasherConfig,
-};
+//! A small tool to check which algorithm would work best on two given images.
+//!
+//! A small tool to check which algorithm would work best on two given images.
+//!
+//! Try different perceptual hashes, with and without pre-processing and print
+//! the distance between the two images.
+//! Useful to understand how sensible is a given algorithm and/or how important
+//! is the pre-processing.
+use eyre::{Context, Result};
+use image::{io::Reader as ImageReader, DynamicImage};
+use img_hash::{HashAlg, HasherConfig};
 use std::{
     fs::File,
-    io::{
-        Cursor,
-        Read,
-    },
+    io::{Cursor, Read},
     path::PathBuf,
 };
 use structopt::StructOpt;
